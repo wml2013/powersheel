@@ -2,7 +2,8 @@
 
 Some Powershell scripts (mainly aimed against my Azure environment) --that should simplify things..
 
-*BuildMyOwnVM.ps1*
+---------------------------------------------------------------
+#BuildMyOwnVM.ps1
 
 A script that builds a new VM from an uploaded VHD file. You cannot clone a machine from one subscription to another if you are using managed disks. This script works around this. 
 
