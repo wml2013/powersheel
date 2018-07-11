@@ -17,7 +17,7 @@ $ErrorActionPreference = "Stop"
 
 $disk = Get-AzureRmDisk -ResourceGroupName $ResourceGroup -DiskName $DiskName
 
-$snapshot = New-AzureRmSnapshotConfig -SourceUri $disk.Id -CreateOption Copy -Location 'northeurope'
+$snapshot = New-AzureRmSnapshotConfig -SourceUri $disk.Id -CreateOption Copy -Location 'eastus'
 
 $snapshotName = "$($disk.Name )-$(Get-Date -Format ddMMMyyyy)-snap"
 

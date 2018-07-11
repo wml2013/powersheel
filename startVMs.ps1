@@ -1,9 +1,15 @@
+Param(
+    [string]$VMName,
+    [string]$ResourceGroup
+)
+
 login-AzureRmAccount
-# web adaptor for portal
-Start-AzureRmVM -Name psepdev1w001 -ResourceGroupName psepdev1_rg
-# portal
+# using parameters
+Start-AzureRmVM -Name $VMName -ResourceGroupName $ResourceGroup
+
+# skansa
 Start-AzureRmVM -Name psepdev1w002 -ResourceGroupName psepdev1_rg
-# web adaptor for server
+# skansa2
 Start-AzureRmVM -Name psssdev1w001 -ResourceGroupName psssdev1_rg
 # hosted arcgis server 1
 Start-AzureRmVM -Name psssdev1w002 -ResourceGroupName psssdev1_rg
