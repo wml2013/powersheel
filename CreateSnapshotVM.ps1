@@ -9,15 +9,15 @@ Param(
 #
 #Power the VM down before taking the snapshot, then run the script like this:
 #
-# .\Create-Snapshot -ResourceGroup <RGname> -DiskName <vmname>_osdisk
+# .\CreateSnapshotVM.ps1 -ResourceGroup <RGname> -DiskName <vmname>_osdisk
 # E.g.
-# .\Create-Snapshot -ResourceGroup psjptst1_rg_mid -DiskName psjptst1wm01_osdisk
+# .\CreateSnapshotVM -ResourceGroup skanska -DiskName skanska_2ahhhjyys8tuulderk
 
 $ErrorActionPreference = "Stop"
 
 $disk = Get-AzureRmDisk -ResourceGroupName $ResourceGroup -DiskName $DiskName
 
-$snapshot = New-AzureRmSnapshotConfig -SourceUri $disk.Id -CreateOption Copy -Location 'eastus'
+$snapshot = New-AzureRmSnapshotConfig -SourceUri $disk.Id -CreateOption Copy -Location 'westeurope'
 
 $snapshotName = "$($disk.Name )-$(Get-Date -Format ddMMMyyyy)-snap"
 

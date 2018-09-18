@@ -1,0 +1,1 @@
+﻿(Get-Module -ListAvailable | where-Object{ $_.Name -eq 'Azure' }) | Select Version, Name, Author, PowerShellVersion | Format-List;
