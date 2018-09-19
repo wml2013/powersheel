@@ -2,11 +2,12 @@
 Connect-AzureAsAccount
 Get-AzureRmSubscription -SubscriptionName "Visual Studio Professional 2" | Select-AzureRmSubscription
 
-# Deining some parameters
+# Defining some parameters
 $resourceGroupName = "skanska2"
 $virtualNetworkName = "skanska2"
 $locationName = "westeurope"
 $destinationVhd = "https://skanska2.blob.core.windows.net/vhds/skanska20180214151044.vhd"
+# destination VHD is the source disk that you want to clone...
 # End of parameters
 
 $virtualNetwork = Get-AzureRmVirtualNetwork -ResourceGroupName $resourceGroupName -Name $virtualNetworkName
