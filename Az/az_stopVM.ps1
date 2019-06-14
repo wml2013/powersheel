@@ -1,0 +1,1 @@
+Stop-AzVM -ResourceGroupName "node_vs2" -Name "windows10"
