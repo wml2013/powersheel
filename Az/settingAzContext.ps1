@@ -1,4 +1,4 @@
-﻿#Connecto the my Azure Portal
+﻿#Connect to my Azure Portal
 Connect-AzAccount
 
 #Saves my Azure portal login
